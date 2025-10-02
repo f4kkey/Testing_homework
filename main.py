@@ -8,12 +8,15 @@ def calculate_money(distance, weight):
             return weight * 5
     elif distance <= 50:
         if weight <= 10:
-            return weight * 5
+            return 100
         elif weight <= 50:
             return weight * 10
         else:
             return weight * 15
     else:
-        return weight * 20
+        if weight <= 10:
+            return 200
+        else: 
+            return weight * 20
 
 print(calculate_money(5, 8))    # Output: 50
